@@ -30,7 +30,7 @@ int getsum(int *arr, int n){
     return sum;
 }
 
-void update (int *p){           //passsed a copy so original value wont change.
+void update (int *p){           ///passed a copy so original value wont change but if we do operation on stored value in that then it will update  
     p = p+1;
 }
 int main() {
