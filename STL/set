@@ -1,0 +1,45 @@
+All unique elements
+Uses BST
+Always sorted
+Slower than unordered set
+insert, find, erase, count -> T.C. = O(log n)
+size,begin,end,empty -> T.C. = O(1)
+
+#include <iostream>
+#include <set>           
+using namespace std;
+int main() {
+
+    set<int> s;
+    
+    s.insert(5);
+    s.insert(5);
+    s.insert(5);
+    s.insert(0);
+    s.insert(6);
+    s.insert(6);
+    s.insert(2);
+    s.insert(3);
+    s.insert(1);
+    
+    for(int i:s){
+        cout<<i<<" ";
+    }cout<<endl;
+    
+    set<int>::iterator it = s.begin();
+    it++;
+    
+    s.erase(it);
+     for(int i:s){
+        cout<<i<<" ";
+    }cout<<endl;   
+    
+    cout<<"is 5 present: "<<s.count(5)<<endl;     //if that element is present or not
+    
+    set<int>::iterator itr = s.find(5);
+    cout<<"value present at itr: "<<*itr<<endl; //returns value of itr
+    
+    for(auto it=itr; it!=s.end();it++){             //value from 5
+        cout<<*it<<" ";
+    }cout<<endl;
+}

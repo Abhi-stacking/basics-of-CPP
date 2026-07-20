@@ -1,0 +1,19 @@
+#include <iostream>
+#include <stack>            //for STL (last in first out)
+using namespace std;
+int main() {
+    
+    stack<string> s;
+    
+    s.push("world");
+    s.push("hello");
+    s.push("hey! ");
+    
+    cout<<"at top: "<<s.top()<<endl;
+    
+    s.pop();
+    cout<<"At top: "<<s.top()<<endl;
+    cout<<"size: "<<s.size()<<endl;
+    cout<<"empty or not: "<<s.empty()<<endl;    
+
+}

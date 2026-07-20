@@ -1,0 +1,43 @@
+#include <iostream>
+#include <vector>                       //import library
+using namespace std;
+int main() {
+    vector<int> v;                      //dynamic memory.
+    
+    cout<<"Capacity: "<<v.capacity()<<endl; //returns capacity / meomory assigned
+    
+    v.push_back(1);
+    cout<<"Capacity: "<<v.capacity()<<endl;
+    
+    v.push_back(2);
+    cout<<"Capacity: "<<v.capacity()<<endl;
+    
+    v.push_back(3);
+    cout<<"Capacity: "<<v.capacity()<<endl;
+    
+    cout<<"Size: "<<v.size()<<endl; //size:how many elements in array
+    
+    cout<<"Element at 2nd index: "<<v.at(2)<<endl; //element at that index
+    cout<<"Front element: "<<v.front()<<endl;   //first element
+    cout<<"Element at back: "<<v.back()<<endl;  //last element
+    
+    cout<<"Before pop"<<endl;
+    for(int i:v){
+        cout<<i<<" "<<endl;
+    }
+    
+    v.pop_back();       //pop removes element
+    cout<<"After pop"<<endl;
+    for(int i:v){
+        cout<<i<<" "<<endl;
+    }
+    
+    cout<<"Before clear size: "<<v.size()<<endl;
+    v.clear();              //size = 0; capacity same;
+    cout<<"after clear size: "<<v.size()<<endl;
+    
+    
+    
+    
+    
+}

@@ -1,0 +1,30 @@
+#include <iostream>
+#include <deque>            //for STL
+using namespace std;
+int main() {
+    deque<int> d;           //creates double ended queue
+    
+    d.push_back(1);         // stores at back
+    d.push_front(2);        //stores at front
+    
+    for(int i:d){
+        cout<<i<<" ";
+    }
+    
+    d.pop_back();           //pop removes element
+    cout<<endl;
+    for(int i:d){
+        cout<<i<<" "<<endl;
+    }
+    
+    d.push_front(2);
+    cout<<"1st element: "<<d.at(1)<<endl;   //returns value stored at that index
+    cout<<"Is empty: "<<d.empty()<<endl;    //returns bool
+    
+    cout<<"before erase "<<d.size()<<endl;
+    d.erase(d.begin(), d.begin()+1);    //erase elements between that limits
+    cout<<"After erase"<<d.size()<<endl;
+    for(int i:d){
+        cout<<i<<" "<<endl;
+    }
+}

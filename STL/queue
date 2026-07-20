@@ -1,0 +1,20 @@
+#include <iostream>
+#include <queue>            //for STL (first in first out)
+using namespace std;
+int main() {
+    
+    queue<string> q;
+    
+    q.push("world");
+    q.push("hello");
+    q.push("hey! ");
+    
+    cout<<"First element: "<<q.front()<<endl;
+    cout<<"back element: "<<q.back()<<endl;
+    
+    q.pop();
+    cout<<"First element: "<<q.front()<<endl;
+    
+    cout<<"size: "<<q.size()<<endl;                 //after pop
+    cout<<"Empty or not: "<<q.empty()<<endl;
+}

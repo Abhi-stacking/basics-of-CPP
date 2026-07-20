@@ -1,0 +1,42 @@
+all unique
+key-value pair
+sorted order
+insert,erase,find,count-> T.C. =O(log n)
+implementaion using red black tree or balanced tree
+for unordered map uses hash map with T.C. O(1) 
+
+#include <iostream>
+#include <map>
+using namespace std;
+int main() {
+
+    map<int, string> m;
+    
+    m[1]="hey!";        //1 is key and "hey!" is value
+    m[2]="hello";
+    m[3]="world";
+    
+    for (auto i:m){
+        cout<<i.first<<" "<<i.second<<endl;
+    }cout<<endl;
+   
+   
+   m.insert( {5,"Bheem"} );
+   for (auto i:m){
+        cout<<i.first<<" "<<i.second<<endl;
+    }cout<<endl;
+    
+    cout<<"finding 3: "<<m.count(3)<<endl;      //is present or not
+    cout<<endl;
+    
+    m.erase(3);
+    cout<<"after erase"<<endl;
+     for (auto i:m){
+        cout<<i.first<<" "<<i.second<<endl;
+    }cout<<endl;
+    
+    auto it = m.find(5);
+    for(auto i=it; i!=m.end();i++){
+        cout<<(*i).first<<endl;
+    }
+}

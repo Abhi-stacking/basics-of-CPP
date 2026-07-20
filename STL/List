@@ -1,0 +1,34 @@
+#include <iostream>
+#include <list>            //for STL
+using namespace std;
+int main() {
+    list<int> l;        //create list of datatype int
+    list<int> copy(l);     //copy of l
+    list<int> n(5,100); //size 5 with all elements 100
+    
+    cout<<"Printing n: "<<endl;
+    for(int i:n){
+        cout<<i<<" ";
+    }
+    cout<<endl;
+    
+    l.push_back(1);
+    l.push_front(2);
+    
+    cout<<endl;
+    cout<<"Operations on list l."<<endl;
+    for(int i:l){
+        cout<<i<<" ";
+    }
+    cout<<endl;
+    
+    l.erase(l.begin());
+    cout<<"After erase: "<<endl;
+    
+    for(int i:l){
+        cout<<i<<" ";
+    }
+    
+    l.pop_front();
+    cout<<"size: "<<l.size()<<endl;
+}
