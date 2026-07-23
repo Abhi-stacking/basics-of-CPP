@@ -1,0 +1,29 @@
+/* reference variable means two names for single address block. Means if we write
+int n = 5;
+int& m = n;
+means n and m are locating to same block. If we does operation using m then it will do on 5.
+*/
+
+#include <iostream>
+using namespace std;
+
+void update1(int n){        //pass by value (copy)
+    n++;
+}
+
+void update2(int& m){       //pass by reference (original value but with new name)
+    m++;
+}
+
+int main() {
+int n = 5;
+
+cout<< "value of n: " << n << endl;
+
+update1(n);
+cout<<"without using reference variable: " << n << endl;
+
+update2(n); 
+cout<<"after using reference variable: " << n << endl;
+    return 0;
+}
